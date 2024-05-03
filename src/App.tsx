@@ -1,12 +1,19 @@
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import FanArts from "./pages/FanArts";
+import Games from "./pages/Games";
+import NavBar from "./components/NavBar";
+
 function App() {
   return (
-    <main className="flex w-screen h-screen items-center justify-center bg-gray-200">
-      <section className="bg-white flex flex-col items-center justify-center p-4 shadow-lg rounded-lg w-[500px] p-8">
-        <div className="flex flex-start flex-col w-full">
-          <h1 className="text-[52px] font-poppins font-bold">Template</h1>
-        </div>
-      </section>
-    </main>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/fan-arts" element={<FanArts />} />
+        <Route path="/games" element={<Games />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
