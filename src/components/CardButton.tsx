@@ -12,31 +12,28 @@ const CardButton: React.FC<CardButtonProps> = ({
   onClick,
   link,
 }) => {
-  // For web, use div and img tags. Adjust onClick event for web.
-  // Use an anchor tag or react-router-dom's Link for navigation.
   return (
     <div
-      onClick={onClick} // For a clickable div, attach the onClick handler here.
+      onClick={onClick}
       className="w-[200px] h-[200px] flex items-center justify-center cursor-pointer"
     >
       {link ? (
-        // Use Link for navigation. Adjust styling as needed.
         <Link
           to={link}
-          className="border rounded-[25%] bg-gray-100 hover:bg-gray-200 ring ring-black hover:ring hover:ring-gray-800 shadow-lg hover:shadow-xl flex items-center justify-center w-full h-full"
+          className="border rounded-[25%] bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 ring ring-black hover:ring hover:ring-gray-800 shadow-2xl hover:shadow-none flex items-center justify-center w-full h-full"
         >
           <img
-            style={{ width: 200, height: 200, borderRadius: "50%" }} // Inline styles can be replaced with Tailwind classes if preferred
+            className="rounded-[50%] w-[200px] h-[200px]"
             src={cardImage}
-            alt=""
+            alt="Trilobite Logo"
           />
         </Link>
       ) : (
-        <div className="border bg-gray-100 hover:bg-gray-200 hover:ring hover:ring-black shadow-lg hover:shadow-xl flex items-center justify-center w-full h-full">
+        <div className="border rounded-[25%] bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 ring ring-black hover:ring hover:ring-gray-800 shadow-2xl hover:shadow-none flex items-center justify-center w-full h-full">
           <img
-            style={{ width: 150, height: 150, borderRadius: "50%" }}
+            className="rounded-[50%] w-[200px] h-[200px]"
             src={cardImage}
-            alt=""
+            alt="Trilobite Logo"
           />
         </div>
       )}

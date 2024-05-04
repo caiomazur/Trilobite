@@ -27,6 +27,12 @@ const NavBar = () => {
         >
           Game
         </Link>
+        <Link
+          to="/learn"
+          className="text-md font-medium hover:underline web:underline-offset-4 text-black"
+        >
+          Learn
+        </Link>
       </div>
     </div>
   );
