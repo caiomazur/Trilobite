@@ -3,7 +3,7 @@ import cardImage from "../assets/images/card.png";
 import { useState } from "react";
 import InfoCards from "../components/InfoCards";
 
-import gameCardImg from "../assets/images/TriloGameCard2.png";
+import gameCardImg from "../assets/images/TriloVideoGameImg.webp";
 import fanArtImg from "../assets/images/FanArtsTrilo.webp";
 import learnImg from "../assets/images/Search.png";
 import aboutImg from "../assets/images/TriloCoding.webp";

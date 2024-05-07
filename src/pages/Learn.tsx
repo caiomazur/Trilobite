@@ -3,9 +3,10 @@ import { useState } from "react";
 import InfoCards from "../components/InfoCards";
 import learnImage from "../assets/images/Search.png";
 
-import trilobiteLifeImg from "../assets/images/FirstCardBritish.png";
+import trilobiteFossilImg from "../assets/images/TriloFossilImg.jpeg";
 import trilobiteAnatomyImg from "../assets/images/trilobite-anatomy.jpg";
-import trilobiteExtinctionImg from "../assets/images/ThirdImgBritish.png";
+import trilobiteExtinctionImg from "../assets/images/ForthImgBritish.png";
+import trilobiteLifeImg from "../assets/images/FirstCardBritish.png";
 
 const cardsArr = [
   {
@@ -13,7 +14,7 @@ const cardsArr = [
     description:
       "Trilobites were marine arthropods that lived from the Cambrian to the end of the Permian period, thriving for nearly 300 million years before dying out in the great Permian mass extinction.",
     link: "https://oumnh.ox.ac.uk/learn-what-were-trilobites",
-    image: trilobiteLifeImg,
+    image: trilobiteFossilImg,
   },
   {
     title: "Trilobite Anatomy",

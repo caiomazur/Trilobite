@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { XCircleIcon } from "@heroicons/react/24/outline";
 
 interface CardsProps {
   image?: string;
@@ -64,18 +65,24 @@ const InfoCards: React.FC<InfoCardsProps> = ({
     isVisible && (
       <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
         <div
-          className="bg-white p-8 rounded-lg w-[448px] border border-gray-300 hover:border-gray-100 shadow-lg ring-2 ring-black flex flex-col items-center"
+          className="bg-white px-8 pb-8 pt-2 rounded-lg w-[448px] border border-gray-300 hover:border-gray-100 shadow-lg ring-2 ring-black flex flex-col items-center"
           ref={modalRef}
         >
+          <button
+            onClick={() => setIsVisible(false)}
+            className="relative left-48"
+          >
+            <XCircleIcon width={42} />
+          </button>
           {cardsArr[cardIndex].image && (
             <img
               src={cardsArr[cardIndex].image}
               alt={cardsArr[cardIndex].title}
-              className="w-[350px] h-[350px] rounded-lg ring ring-black shadow-md"
+              className="w-[325px] h-[325px] rounded-lg ring ring-black shadow-md"
             />
           )}
           <Link to={cardsArr[cardIndex].link}>
-            <div className="rounded-lg p-4 mt-6 hover:ring-1 hover:ring-black hover:shadow-lg flex flex-col items-start w-[350px]">
+            <div className="rounded-lg p-4 mt-6 ring-1 hover:ring-[#0000EE] ring-black hover:shadow-lg flex flex-col items-start w-[350px]">
               <h2 className="text-xl font-bold pb-2">
                 {cardsArr[cardIndex].title}
               </h2>
