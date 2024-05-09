@@ -16,6 +16,12 @@ const NavBar = () => {
       </div>
       <div className="flex flex-row gap-4 sm:gap-6">
         <Link
+          to="/"
+          className="text-md font-medium hover:underline web:underline-offset-4 text-black"
+        >
+          Home
+        </Link>
+        <Link
           to="/fan-arts"
           className="text-md font-medium hover:underline web:underline-offset-4 text-black"
         >

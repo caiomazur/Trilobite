@@ -15,7 +15,7 @@ const CardButton: React.FC<CardButtonProps> = ({
   return (
     <div
       onClick={onClick}
-      className="w-[200px] h-[200px] flex items-center justify-center cursor-pointer"
+      className="w-[250px] h-[250px] flex items-center justify-center cursor-pointer"
     >
       {link ? (
         <Link
@@ -23,7 +23,7 @@ const CardButton: React.FC<CardButtonProps> = ({
           className="border rounded-[25%] bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 ring ring-black hover:ring hover:ring-gray-800 shadow-2xl hover:shadow-none flex items-center justify-center w-full h-full"
         >
           <img
-            className="rounded-[50%] w-[200px] h-[200px]"
+            className="rounded-[50%] w-[250px] h-[250px]"
             src={cardImage}
             alt="Trilobite Logo"
           />
@@ -31,7 +31,7 @@ const CardButton: React.FC<CardButtonProps> = ({
       ) : (
         <div className="border rounded-[25%] bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 ring ring-black hover:ring hover:ring-gray-800 shadow-2xl hover:shadow-none flex items-center justify-center w-full h-full">
           <img
-            className="rounded-[50%] w-[200px] h-[200px]"
+            className="rounded-[50%] w-[250px] h-[250px]"
             src={cardImage}
             alt="Trilobite Logo"
           />

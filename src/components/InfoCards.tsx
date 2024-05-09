@@ -12,7 +12,7 @@ interface CardsProps {
 interface InfoCardsProps {
   cardsArr: CardsProps[];
   isVisible: boolean;
-  setIsVisible: (isVisible: boolean) => void; // Un-comment this line to use it
+  setIsVisible: (isVisible: boolean) => void;
 }
 
 const InfoCards: React.FC<InfoCardsProps> = ({
@@ -72,28 +72,30 @@ const InfoCards: React.FC<InfoCardsProps> = ({
             onClick={() => setIsVisible(false)}
             className="relative left-48"
           >
-            <XCircleIcon width={42} />
+            <XCircleIcon className="hover:text-gray-400 " width={42} />
           </button>
-          {cardsArr[cardIndex].image && (
-            <img
-              src={cardsArr[cardIndex].image}
-              alt={cardsArr[cardIndex].title}
-              className="w-[325px] h-[325px] rounded-lg ring ring-black shadow-md"
-            />
-          )}
           <Link to={cardsArr[cardIndex].link}>
-            <div className="rounded-lg p-4 mt-6 ring-1 hover:ring-[#0000EE] ring-black hover:shadow-lg flex flex-col items-start w-[350px]">
+            {cardsArr[cardIndex].image && (
+              <img
+                src={cardsArr[cardIndex].image}
+                alt={cardsArr[cardIndex].title}
+                className="w-[325px] h-[325px] rounded-lg ring ring-black shadow-md hover:ring-gray-400 hover:shadow-xl"
+              />
+            )}
+            <div className="rounded-lg p-4 mt-6 ring-2 hover:ring-3 hover:ring-gray-400 hover:ring-2 ring-black hover:shadow-lg flex flex-col items-start max-w-[350px]">
               <h2 className="text-xl font-bold pb-2">
                 {cardsArr[cardIndex].title}
               </h2>
-              <p className="text-md">{cardsArr[cardIndex].description}</p>
+              <p className="text-md max-w-[300px]">
+                {cardsArr[cardIndex].description}
+              </p>
             </div>
           </Link>
-          <div className="flex justify-between items-center mt-6 w-full">
+          <div className="px-2 flex justify-between items-center mt-6 w-[350px] mb-4">
             {cardIndex !== 0 ? (
               <button
                 onClick={handlePrevious}
-                className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded-xl w-[120px] h-[50px]"
+                className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-xl w-[150px] h-[55px] text-lg ring-1 ring-black shadow-md hover:shadow-lg hover:ring-gray-400"
               >
                 Previous
               </button>
@@ -102,7 +104,7 @@ const InfoCards: React.FC<InfoCardsProps> = ({
             )}
             <button
               onClick={handleNext}
-              className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded-xl w-[100px] h-[50px]"
+              className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-xl w-[150px] h-[55px] text-lg ring-1 ring-black shadow-md hover:shadow-lg hover:ring-gray-400"
             >
               Next
             </button>
