@@ -4,7 +4,7 @@ import classNames from "classnames";
 interface ButtonProps {
   text: string;
   onClick: () => void;
-  type?: string;
+  type: string;
 }
 
 const Button: React.FC<ButtonProps> = ({ text, onClick, type }) => {
@@ -12,11 +12,14 @@ const Button: React.FC<ButtonProps> = ({ text, onClick, type }) => {
     <button onClick={onClick}>
       <div
         className={classNames(
-          "p-2 rounded-lg w-[100px] items-center hover:ring hover:ring-black hover:shadow-md",
+          "text-lg font-bold w-[150px] h-[55px] py-2 px-4 rounded-xl shadow-md hover:shadow-lg flex items-center justify-center",
           {
-            "bg-gray-200 hover:bg-gray-300": type === "primary",
-            "bg-black-500 hover:bg-back-700 text-white hover:ring-white":
+            "text-black bg-gray-200 ring-1 ring-black hover:bg-gray-300 hover:ring-gray-400":
+              type === "primary",
+            "text-white bg-black ring-1 ring-white hover:bg-gray-800 hover:ring-gray-400":
               type === "secondary",
+            "text-black bg-white ring-1 ring-black hover:bg-gray-200 hover:ring-gray-400":
+              type === "tertiary",
           }
         )}
       >

@@ -7,6 +7,7 @@ import gameCardImg from "../assets/images/TriloPlayGameImg.webp";
 import fanArtImg from "../assets/images/FanArtsTrilo.webp";
 import learnImg from "../assets/images/Search.png";
 import aboutImg from "../assets/images/TriloCoding.webp";
+import Timeline from "../components/Timeline";
 
 const cardsArr = [
   {
@@ -50,14 +51,14 @@ const Home = () => {
   return (
     <div className="flex justify-center">
       <div className="max-w-[455px] sm:max-w-[655px] px-4">
-        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-8">
+        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
           Trilobites: Ancient Wonders
         </h1>
         <p className="font-poppins text-xl text-left md:text-xl mt-4">
           Dive into the world of Trilobites, the early inhabitants of our
           oceans.
         </p>
-        <div className="flex justify-center mt-20">
+        <div className="flex justify-center mt-12">
           <CardButton onClick={handleCardButtonClick} cardImage={cardImage} />
         </div>
         {showCards && (

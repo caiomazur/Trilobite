@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { XCircleIcon } from "@heroicons/react/24/outline";
+import Button from "./Button";
 
 interface CardsProps {
   image?: string;
@@ -83,31 +84,21 @@ const InfoCards: React.FC<InfoCardsProps> = ({
               />
             )}
             <div className="rounded-lg p-4 mt-6 ring-2 hover:ring-3 hover:ring-gray-400 hover:ring-2 ring-black hover:shadow-lg flex flex-col items-start max-w-[350px]">
-              <h2 className="text-xl font-bold pb-2">
+              <h2 className="text-lg font-bold pb-2">
                 {cardsArr[cardIndex].title}
               </h2>
-              <p className="text-md max-w-[300px]">
+              <p className="text-sm max-w-[300px]">
                 {cardsArr[cardIndex].description}
               </p>
             </div>
           </Link>
           <div className="px-2 flex justify-between items-center mt-6 w-[350px] mb-4">
             {cardIndex !== 0 ? (
-              <button
-                onClick={handlePrevious}
-                className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-xl w-[150px] h-[55px] text-lg ring-1 ring-black shadow-md hover:shadow-lg hover:ring-gray-400"
-              >
-                Previous
-              </button>
+              <Button onClick={handlePrevious} type="primary" text="Previous" />
             ) : (
               <div />
             )}
-            <button
-              onClick={handleNext}
-              className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-xl w-[150px] h-[55px] text-lg ring-1 ring-black shadow-md hover:shadow-lg hover:ring-gray-400"
-            >
-              Next
-            </button>
+            <Button onClick={handleNext} type="primary" text="Next" />
           </div>
         </div>
       </div>

@@ -42,10 +42,10 @@ const PhotoModal: React.FC<PhotoModalProps> = ({
           className="max-w-[350px] max-h-[350px] sm:max-w-[800px] sm:max-h-[500px] shadow-lg"
         />
         <h2 className="font-poppins font-semibold text-xl mt-4">{title}</h2>
-        <p className="font-poppins text-md max-w-[250px] sm:max-w-[450px] my-2">
+        <p className="font-poppins text-sm max-w-[250px] sm:max-w-[450px] my-2">
           {description}
         </p>
-        <aside className="font-poppins text-sm">{credits}</aside>
+        <aside className="font-poppins text-xs">{credits}</aside>
       </div>
     </div>
   );

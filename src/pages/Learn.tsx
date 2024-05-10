@@ -7,6 +7,7 @@ import trilobiteFossilImg from "../assets/images/TriloFossilImg.jpeg";
 import trilobiteAnatomyImg from "../assets/images/trilobite-anatomy.jpg";
 import trilobiteExtinctionImg from "../assets/images/ForthImgBritish.png";
 import trilobiteLifeImg from "../assets/images/FirstCardBritish.png";
+import Timeline from "../components/Timeline";
 
 const cardsArr = [
   {
@@ -54,15 +55,18 @@ const Learn = () => {
   return (
     <div className="flex justify-center">
       <div className="max-w-[455px] sm:max-w-[655px] px-4">
-        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-8">
+        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
           Learn more about Trilobites
         </h1>
         <p className="font-poppins text-xl text-left md:text-xl mt-4">
           Click and explore the informative cards
         </p>
-        <div className="flex justify-center mt-[108px]">
+        <div className="flex justify-center mt-20 mb-8">
           <CardButton onClick={handleCardButtonClick} cardImage={learnImage} />
         </div>
+
+        <Timeline />
+
         {showCards && (
           <InfoCards
             isVisible={showCards}
