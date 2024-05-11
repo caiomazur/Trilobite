@@ -15,11 +15,17 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="flex flex-row gap-4 sm:gap-6">
-        <Link
+        {/* <Link
           to="/"
           className="text-md font-medium hover:underline web:underline-offset-4 text-black"
         >
           Home
+        </Link> */}
+        <Link
+          to="/learn"
+          className="text-md font-medium hover:underline web:underline-offset-4 text-black"
+        >
+          Learn
         </Link>
         <Link
           to="/fan-arts"
@@ -31,13 +37,7 @@ const NavBar = () => {
           to="/games"
           className="text-md font-medium hover:underline web:underline-offset-4 text-black"
         >
-          Game
-        </Link>
-        <Link
-          to="/learn"
-          className="text-md font-medium hover:underline web:underline-offset-4 text-black"
-        >
-          Learn
+          Games
         </Link>
       </div>
     </div>

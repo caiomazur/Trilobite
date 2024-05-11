@@ -9,7 +9,7 @@ const Games = () => {
       style={{ backgroundImage: `url(${Background})` }}
     >
       <div className="bg-gray-800 w-[400px] rounded-lg border-4 border-white border-double mt-4 shadow-lg">
-        <h1 className="text-[38px] text-center text-white font-bold">
+        <h1 className="font-poppins text-[38px] text-center text-white font-bold">
           Trilo Tac Toe
         </h1>
       </div>

@@ -5,16 +5,16 @@ import InfoCards from "../components/InfoCards";
 
 import gameCardImg from "../assets/images/TriloPlayGameImg.webp";
 import fanArtImg from "../assets/images/FanArtsTrilo.webp";
-import learnImg from "../assets/images/Search.png";
+import learnImg from "../assets/images/TriloEnciclopediaImg.webp";
 import aboutImg from "../assets/images/TriloCoding.webp";
 import Timeline from "../components/Timeline";
 
 const cardsArr = [
   {
-    title: "Games",
-    description: "Discover fun games about Trilobites.",
-    link: "/games",
-    image: gameCardImg,
+    title: "Learn",
+    description: "Learn more about the world of Trilobites.",
+    link: "/learn",
+    image: learnImg,
   },
   {
     title: "Fan Arts",
@@ -23,17 +23,18 @@ const cardsArr = [
     image: fanArtImg,
   },
   {
-    title: "Learn",
-    description: "Learn more about the world of Trilobites.",
-    link: "/learn",
-    image: learnImg,
+    title: "Games",
+    description: "Discover fun games about Trilobites.",
+    link: "/games",
+    image: gameCardImg,
   },
-  {
-    title: "About",
-    description: "Learn more about this project.",
-    link: "/about",
-    image: aboutImg,
-  },
+
+  // {
+  //   title: "About",
+  //   description: "Learn more about this project.",
+  //   link: "/about",
+  //   image: aboutImg,
+  // },
 ];
 
 const Home = () => {
@@ -54,11 +55,11 @@ const Home = () => {
         <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
           Trilobites: Ancient Wonders
         </h1>
-        <p className="font-poppins text-xl text-left md:text-xl mt-4">
-          Dive into the world of Trilobites, the early inhabitants of our
-          oceans.
+        <p className="font-poppins text-xl text-left md:text-xl mt-4 max-w-[500px]">
+          Dive into the world of Trilobites, the masters of the prehistoric
+          game.
         </p>
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-10">
           <CardButton onClick={handleCardButtonClick} cardImage={cardImage} />
         </div>
         {showCards && (

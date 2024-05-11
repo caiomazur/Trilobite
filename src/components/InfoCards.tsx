@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { XCircleIcon } from "@heroicons/react/24/outline";
 import Button from "./Button";
 
-interface CardsProps {
+export interface CardsProps {
   image?: string;
   title: string;
   description: string;
@@ -64,16 +64,17 @@ const InfoCards: React.FC<InfoCardsProps> = ({
 
   return (
     isVisible && (
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
         <div
-          className="bg-white px-8 pb-8 pt-2 rounded-lg w-[448px] border border-gray-300 hover:border-gray-100 shadow-lg ring-2 ring-black flex flex-col items-center"
+          className="bg-white px-8 py-8 rounded-lg w-[448px] relative border border-gray-300 hover:border-gray-100 shadow-lg ring-2 ring-black flex flex-col items-center"
           ref={modalRef}
+          onClick={(e) => e.stopPropagation()} // Stop click events from propagating to the overlay
         >
           <button
             onClick={() => setIsVisible(false)}
-            className="relative left-48"
+            className="absolute top-3 right-3" // Positioning the button at the top right corner
           >
-            <XCircleIcon className="hover:text-gray-400 " width={42} />
+            <XCircleIcon className="h-8 w-8 hover:text-gray-500" />
           </button>
           <Link to={cardsArr[cardIndex].link}>
             {cardsArr[cardIndex].image && (

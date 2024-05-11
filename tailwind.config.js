@@ -27,10 +27,70 @@ export default {
         poppins: ['"Poppins"', "sans-serif"],
       },
       screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+      },
+      keyframes: {
+        rainbow: {
+          "0%, 100%": { color: "#ff0000" },
+          "17%": { color: "#ffa500" },
+          "34%": { color: "#ffff00" },
+          "51%": { color: "#ff0000" },
+          "68%": { color: "#0000ff" },
+          "85%": { color: "#4b0082" },
+        },
+        rainbowBg: {
+          "0%, 100%": { backgroundColor: "#4b0082" },
+          "17%": { backgroundColor: "#0000ff" },
+          "34%": { backgroundColor: "#ffff00" },
+          "51%": { backgroundColor: "#008000" },
+          "68%": { backgroundColor: "#ffa500" },
+          "85%": { backgroundColor: "#ff0000" },
+        },
+        fall: {
+          "0%": { transform: "translate(0%,-150%) skewX(0deg)" },
+          "50%": { transform: "translate(0%,0%) skewX(-10deg)" },
+          "100%": { transform: "translate(0%,150%) skewX(0deg)" },
+        },
+        combinedAnimation: {
+          "0%, 100%": { color: "#DAF7A6", transform: "translateY(-55%)" },
+          "17%": { color: "#FFC300" },
+          "34%": { color: "#FF5733" },
+          "51%": { color: "#C70039", transform: "translateY(0%)" },
+          "68%": { color: "#900C3F" },
+          "85%": { color: "#B2BEB5", transform: "translateY(70%)" },
+        },
+        combinedAnimationBg: {
+          "0%, 100%": {
+            backgroundColor: "#353935",
+            transform: "translateY(-100%)",
+          },
+          "17%": {
+            backgroundColor: "#36454F",
+          },
+          "34%": {
+            backgroundColor: "#023020",
+          },
+          "51%": {
+            backgroundColor: "#301934",
+            transform: "translateY(0%)",
+          },
+          "68%": {
+            backgroundColor: "#343434",
+          },
+          "85%": {
+            backgroundColor: "#28282B",
+            transform: "translateY(100%)",
+          },
+        },
+      },
+      animation: {
+        "rainbow-color": "rainbow 3s ease-in-out infinite",
+        fall: "fall 3s ease infinite",
+        combined: "combinedAnimation 3s ease-in-out infinite",
+        combinedBg: "combinedAnimationBg 3s ease-in-out infinite",
       },
     },
   },
