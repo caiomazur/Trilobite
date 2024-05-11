@@ -3,6 +3,7 @@ import { useState } from "react";
 import InfoCards, { CardsProps } from "../components/InfoCards";
 import Timeline from "../components/Timeline";
 import Hr from "../components/Hr";
+import Footer from "../components/Footer";
 
 import triloFriendImg from "../assets/images/TriloFriends-removebg.png";
 import learnImage from "../assets/images/TriloLookingGlass-removebg.png";
@@ -79,7 +80,7 @@ const cambrianCards = [
   {
     title: "Hallucigenia",
     description:
-      "Characterized by its spindly legs and paired spikes, Hallucigenia's bizarre appearance initially confused scientists. This invertebrate, with a body where the head and tail are nearly indistinguishable, was once thought to represent a new animal phylum. Today, it's considered a distant ancestor to velvet worms.",
+      "This invertebrate, with a body where the head and tail are nearly indistinguishable, was once thought to represent a new animal phylum. Today, it's considered a distant ancestor to velvet worms.",
     link: "https://www.thoughtco.com/strangest-animals-of-the-cambrian-period-4125717",
     image: hallucigeniaImage,
   },
@@ -107,7 +108,7 @@ const cambrianCards = [
   {
     title: "Opabinia",
     description:
-      "Opabinia, with its five stalked eyes and backward-facing mouth, appeared to be hastily assembled. Difficult to classify, it is now understood to be somehow ancestral to modern arthropods, illustrating the rapid evolution of multicellular life during the Cambrian.",
+      "Opabinia, with its five stalked eyes and backward-facing mouth, appeared to be hastily assembled. Difficult to classify, it is now understood to be somehow ancestral to modern arthropods.",
     link: "https://www.thoughtco.com/strangest-animals-of-the-cambrian-period-4125717",
     image: opabiniaImage,
   },
@@ -152,7 +153,7 @@ const Learn = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="max-w-[455px] sm:max-w-[655px] px-4 pb-6">
+      <div className="max-w-[455px] sm:max-w-[655px] px-4 pb-4">
         <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
           Learn more about Trilobites
         </h1>
@@ -192,6 +193,9 @@ const Learn = () => {
           />
         )}
       </div>
+      <Hr />
+
+      <Footer />
     </div>
   );
 };

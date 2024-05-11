@@ -7,7 +7,6 @@ import gameCardImg from "../assets/images/TriloPlayGameImg.webp";
 import fanArtImg from "../assets/images/FanArtsTrilo.webp";
 import learnImg from "../assets/images/TriloEnciclopediaImg.webp";
 import aboutImg from "../assets/images/TriloCoding.webp";
-import Timeline from "../components/Timeline";
 
 const cardsArr = [
   {
@@ -18,13 +17,13 @@ const cardsArr = [
   },
   {
     title: "Fan Arts",
-    description: "Explore fan-created arts of Trilobites.",
+    description: "Explore fan-created arts.",
     link: "/fan-arts",
     image: fanArtImg,
   },
   {
     title: "Games",
-    description: "Discover fun games about Trilobites.",
+    description: "Discover fun games.",
     link: "/games",
     image: gameCardImg,
   },
