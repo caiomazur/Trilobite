@@ -72,7 +72,7 @@ const InfoCards: React.FC<InfoCardsProps> = ({
         >
           <button
             onClick={() => setIsVisible(false)}
-            className="absolute top-3 right-3" // Positioning the button at the top right corner
+            className="absolute top-3 right-3"
           >
             <XCircleIcon className="h-8 w-8 hover:text-gray-500" />
           </button>

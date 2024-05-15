@@ -27,9 +27,8 @@ const Timeline = () => {
       hoverEffect: "hover:bg-red-600",
     },
   ];
-  const maxDuration = 270000000; // Longest duration from species for scaling
+  const maxDuration = 270000000;
 
-  // Helper function to format numbers to millions or thousands
   const formatLifespan = (lifespan: number) => {
     if (lifespan >= 1000000) {
       return `${(lifespan / 1000000).toLocaleString()} million years`;

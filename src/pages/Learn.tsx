@@ -139,13 +139,11 @@ const Learn = () => {
   const [currentCards, setCurrentCards] = useState<CardsProps[]>([]);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Function to handle showing trilobite cards
   const showTrilobiteCards = () => {
     setCurrentCards(cardsArr);
     setIsVisible(true);
   };
 
-  // Function to handle showing Cambrian cards
   const showCambrianCards = () => {
     setCurrentCards(cambrianCards);
     setIsVisible(true);

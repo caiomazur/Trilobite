@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/images/card.png"; // Make sure this import works, or use a public URL
+import Logo from "../assets/images/card.png";
 
 const NavBar = () => {
   return (

@@ -20,7 +20,7 @@ const TicTac = () => {
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, [turn, board]); // Now also depends on board to ensure it updates after board state changes
+  }, [turn, board]);
 
   const winCheck = (currentBoard: string[]) => {
     const lines = [
@@ -34,7 +34,7 @@ const TicTac = () => {
       [2, 4, 6], // Diagonals
     ];
 
-    let boardFull = true; // Assume the board is full
+    let boardFull = true;
 
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
@@ -58,7 +58,7 @@ const TicTac = () => {
     }
 
     if (boardFull) {
-      setWhoWin("It's a draw!"); // Set draw message if no winner and board is full
+      setWhoWin("It's a draw!");
     }
   };
 
