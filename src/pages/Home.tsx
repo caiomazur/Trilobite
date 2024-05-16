@@ -6,7 +6,7 @@ import InfoCards from "../components/InfoCards";
 import gameCardImg from "../assets/images/TriloPlayGameImg.webp";
 import fanArtImg from "../assets/images/FanArtsTrilo.webp";
 import learnImg from "../assets/images/TriloEnciclopediaImg.webp";
-import aboutImg from "../assets/images/TriloCoding.webp";
+//import aboutImg from "../assets/images/TriloCoding.webp";
 
 const cardsArr = [
   {
