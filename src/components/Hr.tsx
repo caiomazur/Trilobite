@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hr = () => {
   return (
     <div className="flex justify-center items-center">
