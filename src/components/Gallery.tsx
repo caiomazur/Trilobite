@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PhotoModal from "./PhotoModal";
+import Footer from "./Footer";
 
 interface PhotoElem {
   image: string;
@@ -27,13 +28,13 @@ const Gallery: React.FC<GaleryProps> = ({ photosArr }) => {
   };
 
   return (
-    <div className="flex flex-row gap-6 items-center justify-center flex-wrap mb-8">
+    <div className="flex flex-row gap-6 items-center justify-center flex-wrap mb-2">
       {photosArr &&
         photosArr.map((photo, index) => {
           return (
             <button
               key={index}
-              className="flex flex-col items-start border-[15px] border-white rounded-md shadow-lg hover:shadow-xl"
+              className="flex flex-col items-start border-[15px] border-white rounded-md shadow-lg hover:shadow-xl hover:scale-105"
               onClick={() => handleModalOpen(photo)}
             >
               <img
@@ -41,7 +42,7 @@ const Gallery: React.FC<GaleryProps> = ({ photosArr }) => {
                 alt={"Fan Art index"}
                 src={photo.image}
               />
-              <h4 className="font-poppins ont-semibold mt-2">{photo.title}</h4>
+              <h4 className="font-poppins font-semibold mt-2">{photo.title}</h4>
               {/* <p>{photo.credits && photo.credits}</p> */}
             </button>
           );
@@ -56,6 +57,20 @@ const Gallery: React.FC<GaleryProps> = ({ photosArr }) => {
           credits={selectedPhoto.credits || ""}
         />
       )}
+      <div className="mt-8">
+        <p className="font-poppins font-semibold text-lg mb-2">
+          Got fan art? Send it to{" "}
+          <a
+            href="mailto:trilo.tales@gmail.com"
+            className="text-primary-purple underline"
+          >
+            trilo.tales@gmail.com
+          </a>
+        </p>
+        <p className="font-poppins text-md">
+          Your artwork could be featured here!
+        </p>
+      </div>
     </div>
   );
 };

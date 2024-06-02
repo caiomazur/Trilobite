@@ -92,6 +92,16 @@ export default {
         combined: "combinedAnimation 3s ease-in-out infinite",
         combinedBg: "combinedAnimationBg 3s ease-in-out infinite",
       },
+      boxShadow: {
+        "button-default": "8px 8px 16px rgba(0, 0, 0, 0.3)",
+        "button-hover": "4px 4px 8px rgba(0, 0, 0, 0.2)",
+      },
+      transitionProperty: {
+        shadow: "shadow",
+      },
+      transitionDuration: {
+        200: "200ms",
+      },
     },
   },
   plugins: [],

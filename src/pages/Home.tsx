@@ -50,7 +50,7 @@ const Home = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="max-w-[455px] sm:max-w-[655px] px-4">
+      <div className="max-w-[455px] sm:max-w-[655px] px-4 mt-2">
         <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
           Trilobites: Ancient Wonders
         </h1>

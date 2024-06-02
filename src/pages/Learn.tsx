@@ -9,7 +9,6 @@ import triloFriendImg from "../assets/images/TriloFriends-removebg.png";
 import learnImage from "../assets/images/TriloLookingGlass-removebg.png";
 import trilobiteFossilImg from "../assets/images/TriloFossil01.webp";
 import trilobiteAnatomyImg from "../assets/images/trilobite-anatomy.jpg";
-import trilobiteExtinctionImg from "../assets/images/TriloExtinctImg.jpg";
 import trilobiteLifeImg from "../assets/images/TriloMateImg.jpeg";
 import trilobiteEyes from "../assets/images/TriloEyes.jpeg";
 import trilobiteFossilImg02 from "../assets/images/TriloFossil02.jpeg";
@@ -45,13 +44,6 @@ const cardsArr = [
       "Trilobites may have mated like modern horseshoe crabs, using claspers for males to hold onto females, enhancing reproductive success. This finding highlights their complex behaviors, akin to some current marine arthropods.",
     link: "https://www.nhm.ac.uk/discover/news/2022/may/trilobite-fossil-reveals-how-ancient-arthropods-mated.html",
     image: trilobiteLifeImg,
-  },
-  {
-    title: "Extinction of Trilobites",
-    description:
-      "Trilobites went extinct 251 million years ago during the end Permian mass extinction, which eradicated over 90% of all species on Earth at that time.",
-    link: "https://www.goodreads.com/book/show/75290432-trilobite",
-    image: trilobiteExtinctionImg,
   },
   {
     title: "Vision and Defense",
@@ -151,7 +143,7 @@ const Learn = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="max-w-[455px] sm:max-w-[655px] px-4 pb-4">
+      <div className="max-w-[455px] sm:max-w-[655px] px-4 pb-4 mt-2">
         <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
           Learn more about Trilobites
         </h1>
@@ -193,7 +185,7 @@ const Learn = () => {
       </div>
       <Hr />
 
-      <Footer />
+      <Footer text="Developed by Caio Mazur" />
     </div>
   );
 };
