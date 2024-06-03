@@ -70,9 +70,9 @@ const photosArr = [
 
 const FanArts = () => {
   return (
-    <div className="flex flex-col items-center px-4 mt-2">
+    <div className="flex flex-col items-center px-4 dark:bg-black text-black dark:text-white">
       <div className="max-w-[455px] sm:max-w-[655px]">
-        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
+        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4 customUnderline">
           Fan Arts
         </h1>
         <p className="font-poppins text-xl text-left md:text-xl mb-8">

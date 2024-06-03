@@ -1,3 +1,4 @@
+import React from "react";
 import trilobiteImageO from "../assets/images/trolotictacO2.webp";
 import trilobiteImageX from "../assets/images/trilotictacX.webp";
 
@@ -9,7 +10,7 @@ interface CellProps {
 const Cell: React.FC<CellProps> = ({ type, onClick }) => {
   return (
     <button
-      className="w-full h-[133px] flex justify-center items-center border-4 border-white text-white border-double text-[42px] bg-transparent rounded-md shadow-2xl"
+      className="w-full h-[116px] sm:h-[133px] flex justify-center items-center border-4 border-white text-white border-double text-[42px] bg-transparent rounded-md shadow-2xl"
       onClick={onClick}
     >
       {type === "X" ? (

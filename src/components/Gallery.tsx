@@ -34,7 +34,7 @@ const Gallery: React.FC<GaleryProps> = ({ photosArr }) => {
           return (
             <button
               key={index}
-              className="flex flex-col items-start border-[15px] border-white rounded-md shadow-lg hover:shadow-xl hover:scale-105"
+              className="flex flex-col items-start border-[15px] dark:border-[6px] border-white rounded-md shadow-lg hover:shadow-xl hover:scale-105"
               onClick={() => handleModalOpen(photo)}
             >
               <img
@@ -42,7 +42,7 @@ const Gallery: React.FC<GaleryProps> = ({ photosArr }) => {
                 alt={"Fan Art index"}
                 src={photo.image}
               />
-              <h4 className="font-poppins font-semibold mt-2">{photo.title}</h4>
+              <h4 className="font-poppins font-semibold m-2">{photo.title}</h4>
               {/* <p>{photo.credits && photo.credits}</p> */}
             </button>
           );
@@ -57,13 +57,10 @@ const Gallery: React.FC<GaleryProps> = ({ photosArr }) => {
           credits={selectedPhoto.credits || ""}
         />
       )}
-      <div className="mt-8">
+      <div className="mt-8 w-full flex flex-col items-center">
         <p className="font-poppins font-semibold text-lg mb-2">
           Got fan art? Send it to{" "}
-          <a
-            href="mailto:trilo.tales@gmail.com"
-            className="text-primary-purple underline"
-          >
+          <a href="mailto:trilo.tales@gmail.com" className="slideLight">
             trilo.tales@gmail.com
           </a>
         </p>

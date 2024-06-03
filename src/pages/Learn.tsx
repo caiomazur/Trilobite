@@ -142,18 +142,18 @@ const Learn = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="max-w-[455px] sm:max-w-[655px] px-4 pb-4 mt-2">
-        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
+    <div className="flex flex-col items-center justify-center dark:bg-black dark:text-white">
+      <div className="w-screen sm:max-w-[655px] px-4 mt-2">
+        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4 customUnderline">
           Learn more about Trilobites
         </h1>
         <p className="font-poppins text-xl text-left md:text-xl mt-4">
           Click and explore the informative cards
         </p>
-        <div className="flex flex-row justify-center items-center mt-16 mb-12">
-          <div className="mr-12 flex flex-col items-center">
+        <div className="flex flex-col sm:flex-row sm:justify-center mt-16 mb-6 sm:mb-12">
+          <div className="flex flex-col items-center sm:mr-12">
             <CardButton onClick={showTrilobiteCards} cardImage={learnImage} />
-            <h3 className="mt-6 font-poppins text-xl font-semibold">
+            <h3 className="mt-4 mb-6 font-poppins text-xl font-semibold">
               Trilobite
             </h3>
           </div>
@@ -162,7 +162,7 @@ const Learn = () => {
               onClick={showCambrianCards}
               cardImage={triloFriendImg}
             />
-            <h3 className="mt-6 font-poppins text-xl font-semibold">
+            <h3 className="mt-4 font-poppins text-xl font-semibold">
               Cambrian Friends
             </h3>
           </div>
@@ -170,7 +170,7 @@ const Learn = () => {
 
         <Hr />
 
-        <h2 className="font-poppins sm:text-4xl md:text-4xl mt-10 mb-4">
+        <h2 className="font-poppins sm:text-4xl md:text-4xl mt-6 sm:mt-10 mb-4">
           Timeline of Species Longevity
         </h2>
         <Timeline />
@@ -182,8 +182,8 @@ const Learn = () => {
             setIsVisible={setIsVisible}
           />
         )}
+        <Hr />
       </div>
-      <Hr />
 
       <Footer text="Developed by Caio Mazur" />
     </div>

@@ -66,15 +66,15 @@ const InfoCards: React.FC<InfoCardsProps> = ({
     isVisible && (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
         <div
-          className="bg-white px-8 py-8 rounded-lg w-[448px] relative border border-gray-300 hover:border-gray-100 shadow-lg ring-2 ring-black flex flex-col items-center"
+          className="bg-white p-6 sm:p-8 rounded-lg w-[350px] sm:w-[448px] relative border border-gray-300 hover:border-gray-100 shadow-lg ring-2 ring-black flex flex-col items-center"
           ref={modalRef}
           onClick={(e) => e.stopPropagation()} // Stop click events from propagating to the overlay
         >
           <button
             onClick={() => setIsVisible(false)}
-            className="absolute top-3 right-3"
+            className="absolute top-0 right-0 sm:top-3 sm:right-3"
           >
-            <XCircleIcon className="h-8 w-8 hover:text-gray-500" />
+            <XCircleIcon className="h-7 w-7 sm:h-8 sm:w-8 hover:text-gray-500 text-black" />
           </button>
           <Link to={cardsArr[cardIndex].link}>
             {cardsArr[cardIndex].image && (
@@ -84,16 +84,16 @@ const InfoCards: React.FC<InfoCardsProps> = ({
                 className="w-[325px] h-[325px] rounded-lg ring ring-black shadow-md hover:ring-gray-400 hover:shadow-xl"
               />
             )}
-            <div className="rounded-lg p-4 mt-6 ring-2 hover:ring-3 hover:ring-gray-400 hover:ring-2 ring-black hover:shadow-lg flex flex-col items-start max-w-[350px]">
-              <h2 className="text-lg font-bold pb-2">
+            <div className="rounded-lg p-3 sm:p-4 mt-4 sm:mt-6 ring-2 hover:ring-3 hover:ring-gray-400 hover:ring-2 ring-black hover:shadow-lg flex flex-col items-start max-w-[350px]">
+              <h2 className="text-md sm:text-lg font-bold pb-1 sm:pb-2 text-black slideLight">
                 {cardsArr[cardIndex].title}
               </h2>
-              <p className="text-sm max-w-[300px]">
+              <p className="text-sm max-w-[300px] text-black">
                 {cardsArr[cardIndex].description}
               </p>
             </div>
           </Link>
-          <div className="px-2 flex justify-between items-center mt-6 w-[350px] mb-4">
+          <div className="flex justify-between items-center w-full mt-4 sm:mt-6 mb-0 sm:mb-4">
             {cardIndex !== 0 ? (
               <Button onClick={handlePrevious} type="primary" text="Previous" />
             ) : (

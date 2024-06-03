@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     screens: {
       mobile: "375px",
@@ -19,6 +20,9 @@ export default {
           "smokey-grey": "hsl(0, 1%, 44%)",
           "off-black": "hsl(0, 0%, 8%)",
         },
+      },
+      boxShadow: {
+        glow: "0 0 10px rgba(106, 90, 205, 0.7)", // Custom glow shadow
       },
       fontSize: {
         "body-input": "32px",

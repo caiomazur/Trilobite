@@ -20,7 +20,7 @@ const CardButton: React.FC<CardButtonProps> = ({
       {link ? (
         <Link
           to={link}
-          className="rounded-[25%] bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 border-[7px] border-black active:border-double shadow-button-default hover:shadow-button-hover transition-shadow duration-200 flex items-center justify-center w-full h-full"
+          className="rounded-[25%] bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 border-[7px] border-black dark:border-[#6a5acd] active:border-double shadow-button-default hover:shadow-button-hover transition-shadow duration-200 flex items-center justify-center w-full h-full"
         >
           <img
             className="rounded-[50%] w-[200px] h-[200px]"
@@ -29,7 +29,7 @@ const CardButton: React.FC<CardButtonProps> = ({
           />
         </Link>
       ) : (
-        <div className="rounded-[25%] bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 border-[7px] border-black active:border-double shadow-button-default hover:shadow-button-hover transition-shadow duration-200 flex items-center justify-center w-full h-full">
+        <div className="rounded-[25%] bg-gray-100 hover:bg-gray-200 focus:bg-gray-300 border-[7px] border-black dark:border-[#6a5acd] active:border-double shadow-button-default hover:shadow-button-hover transition-shadow duration-200 flex items-center justify-center w-full h-full underline">
           <img
             className="rounded-[50%] w-[200px] h-[200px]"
             src={cardImage}

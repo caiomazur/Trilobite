@@ -36,12 +36,12 @@ const Timeline = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="w-full mb-4">
       {species.map((sp) => {
         const width = (sp.lifespan / maxDuration) * 100;
         return (
           <div className="flex items-center mt-2" key={sp.name}>
-            <div className="w-40 mr-5 font-poppins text-sm font-medium">
+            <div className="w-24 sm:w-40 mr-5 font-poppins text-sm font-medium">
               {sp.name}: {formatLifespan(sp.lifespan)}
             </div>
             <div className="flex-1 bg-gray-200 h-4 rounded transition-all duration-300">

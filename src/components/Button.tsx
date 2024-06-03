@@ -12,7 +12,7 @@ const Button: React.FC<ButtonProps> = ({ text, onClick, type }) => {
     <button onClick={onClick}>
       <div
         className={classNames(
-          "text-lg font-bold w-[150px] h-[55px] py-2 px-4 rounded-xl shadow-md hover:shadow-lg flex items-center justify-center",
+          "text-lg font-bold w-[125px] h-[50px] sm:w-[150px] sm:h-[55px] py-2 px-4 rounded-xl shadow-md hover:shadow-lg flex items-center justify-center",
           {
             "text-black bg-gray-200 ring-1 ring-black hover:bg-gray-300 hover:ring-gray-400":
               type === "primary",

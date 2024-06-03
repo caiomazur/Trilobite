@@ -43,18 +43,17 @@ const Home = () => {
     setShowCards(true);
   };
 
-  // Function to update the visibility state
   const handleSetIsVisible = (isVisible: boolean) => {
     setShowCards(isVisible);
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="max-w-[455px] sm:max-w-[655px] px-4 mt-2">
-        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4">
+    <div className="flex justify-center bg-white dark:bg-black text-black dark:text-white min-h-screen">
+      <div className="max-w-screen-sm w-full px-4 mt-2">
+        <h1 className="font-poppins text-4xl sm:text-4xl md:text-5xl lg:text-6xl pb-4 mt-4 customUnderline">
           Trilobites: Ancient Wonders
         </h1>
-        <p className="font-poppins text-xl text-left md:text-xl mt-4 max-w-[500px]">
+        <p className="font-poppins text-xl text-left md:text-xl mt-4 sm:max-w-[500px]">
           Dive into the world of Trilobites, the masters of the prehistoric
           game.
         </p>
