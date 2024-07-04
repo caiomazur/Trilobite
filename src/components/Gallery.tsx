@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PhotoModal from "./PhotoModal";
-import Footer from "./Footer";
 
 interface PhotoElem {
   image: string;
