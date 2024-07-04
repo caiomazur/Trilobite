@@ -1,6 +1,6 @@
 import CardButton from "../components/CardButton";
 import cardImage from "../assets/images/card.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InfoCards from "../components/InfoCards";
 
 import gameCardImg from "../assets/images/TriloPlayGameImg.webp";
@@ -46,6 +46,14 @@ const Home = () => {
   const handleSetIsVisible = (isVisible: boolean) => {
     setShowCards(isVisible);
   };
+
+  useEffect(() => {
+    document.body.classList.add("overflow-hidden");
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, []);
 
   return (
     <div className="flex justify-center bg-white dark:bg-black text-black dark:text-white min-h-screen">
