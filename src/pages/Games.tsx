@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TicTac from "../components/TicTac";
 import Background from "../assets/images/game-background.png";
 //import Snake from "../components/Snake";
