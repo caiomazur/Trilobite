@@ -1,7 +1,8 @@
 import React from "react";
 import TicTac from "../components/TicTac";
 import Background from "../assets/images/game-background.png";
-//import Snake from "../components/Snake";
+//import TrilobiteAdventure from "../components/TrilobiteAdventure";
+// import Snake from "../components/Snake";
 
 const Games: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Games: React.FC = () => {
       <div className="flex justify-center items-start w-screen h-screen">
         <TicTac />
         {/* <Snake /> */}
+        {/* <TrilobiteAdventure/> */}
       </div>
     </div>
   );
